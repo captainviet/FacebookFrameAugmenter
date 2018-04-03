@@ -37,6 +37,9 @@ $(document).ready(function() {
 			height: $(window).height()
 		});
 		$('#save-wrap').html($('.image-editor>.column1').clone());
+    const imageData = $('.column1').cropit('export')
+    console.log(imageData)
+    window.open(imageData)
 		domtoimage.toBlob( $('#save-wrap')[0] )
 		    .then(function (blob) {
 		    	var d = new Date();
